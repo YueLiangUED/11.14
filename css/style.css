@@ -131,13 +131,13 @@ main ul:nth-child(2) li,main ul:nth-child(3) li{
     width: 2.3rem;
     height: .76rem;
     border: 2px solid #dfdfdf;
+    background-color: #ffffff;
 }
 main ul:nth-child(2) li span,main ul:nth-child(3) li span{
     position: absolute;
     font-size: .18rem;
 }
 main ul:nth-child(2) li span i,main ul:nth-child(3) li span i{
-    font-weight: 100;
     font-style: normal;
     font-size: .3rem;
 }
@@ -287,4 +287,9 @@ footer div.active{
 footer div p{
     text-indent: -1.6em;
     text-align: justify;
+}
+
+*{
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent; /* For some Androids */
 }
