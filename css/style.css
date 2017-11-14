@@ -1,0 +1,290 @@
+header{
+    width: 7.5rem;
+    height: 3.1rem;
+    background: url("../images/headerBg.png") center no-repeat;
+    background-size: cover;
+}
+main{
+    box-sizing: border-box;
+    padding: 15px 0 21px;
+    width: 7.5rem;
+    height: 4.29rem;
+    background-color: #f1f1f1;
+}
+main ul:nth-child(1){
+    position: relative;
+    box-sizing: border-box;
+    width: 7.5rem;
+    height: .94rem;
+    border: 2px solid #dfdfdf;
+    background-color: #ffffff;
+}
+main ul:nth-child(1)>span{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    width: 2px;
+    height: .62rem;
+    background-color: #f1f1f1;
+}
+main ul:nth-child(1) li{
+    position: relative;
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+main ul:nth-child(1) li span{
+    position: absolute;
+}
+main ul:nth-child(1) li:nth-child(1).active span:nth-child(3){
+    color: #33acfb;
+}
+main ul:nth-child(1) li:nth-child(2).active span:nth-child(3){
+    color: #ff0081;
+}
+main ul:nth-child(1) li span:nth-child(1){
+    width: .74rem;
+    height: .49rem;
+}
+main ul:nth-child(1) li:nth-child(1) span:nth-child(1){
+    top: 0;
+    left: 0;
+    background: url("../images/bixuan_1.png") center no-repeat;
+    background-size: cover;
+}
+main ul:nth-child(1) li:nth-child(2) span:nth-child(1){
+    bottom: 0;
+    right: 0;
+    background: url("../images/bixuan_2.png") center no-repeat;
+    background-size: cover;
+}
+main ul:nth-child(1) li span:nth-child(2){
+    top: 0;
+    bottom: 0;
+    left: .68rem;
+    margin: auto;
+    width: .64rem;
+    height: .64rem;
+}
+main ul:nth-child(1) li:nth-child(1) span:nth-child(2){
+    background: url("../images/thIcon.png") center no-repeat;
+    background-size: cover;
+}
+main ul:nth-child(1) li:nth-child(2) span:nth-child(2){
+    background: url("../images/llIcon.png") center no-repeat;
+    background-size: cover;
+}
+main ul:nth-child(1) li span:nth-child(3){
+    top: 0;
+    bottom: 0;
+    left: 1.48rem;
+    margin: auto;
+    font-size: .34rem;
+    line-height: .92rem;
+    color: #333333;
+}
+main ul:nth-child(1) li>div div:nth-child(1){
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -.16rem;
+    margin: auto;
+    width: 0;
+    height: 0;
+    border-top: .16rem solid #dfdfdf;
+    border-left: .2rem solid transparent;
+    border-right: .2rem solid transparent;
+}
+main ul:nth-child(1) li>div div:nth-child(2){
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -.14rem;
+    margin: auto;
+    width: 0;
+    height: 0;
+    border-top: .16rem solid #ffffff;
+    border-left: .2rem solid transparent;
+    border-right: .2rem solid transparent;
+}
+main ul:nth-child(1) li>div{
+    display: none;
+}
+main ul:nth-child(1) li.active>div{
+    display: block;
+}
+main ul:nth-child(2),main ul:nth-child(3){
+    padding-left: .2rem;
+    display: none;
+}
+main ul.active{
+    display: block;
+}
+main ul:nth-child(2) li,main ul:nth-child(3) li{
+    position: relative;
+    float: left;
+    box-sizing: border-box;
+    margin: .2rem .1rem 0 0;
+    width: 2.3rem;
+    height: .76rem;
+    border: 2px solid #dfdfdf;
+}
+main ul:nth-child(2) li span,main ul:nth-child(3) li span{
+    position: absolute;
+    font-size: .18rem;
+}
+main ul:nth-child(2) li span i,main ul:nth-child(3) li span i{
+    font-weight: 100;
+    font-style: normal;
+    font-size: .3rem;
+}
+main ul:nth-child(2) li span:nth-child(1){
+    left: .06rem;
+    line-height: .65rem;
+    color: #0da8ff;
+}
+main ul:nth-child(3) li span:nth-child(1){
+    left: .06rem;
+    line-height: .65rem;
+    color: #ff0081;
+}
+main ul:nth-child(2) li span:nth-child(2),main ul:nth-child(3) li span:nth-child(2){
+    left: 1.34rem;
+    line-height: .65rem;
+    color: #888888;
+}
+main ul:nth-child(2) li span:nth-child(3),main ul:nth-child(3) li span:nth-child(3){
+    display: none;
+    position: absolute;
+    right: -0.02rem;
+    bottom: -0.02rem;
+    width: .42rem;
+    height: .26rem;
+    background: url("../images/check.png") center no-repeat;
+    background-size: cover;
+}
+main ul:nth-child(2) li.active,main ul:nth-child(3) li.active{
+    border: 3px solid #0da8ff;
+}
+main ul:nth-child(2) li.active span:nth-child(3),main ul:nth-child(3) li.active span:nth-child(3){
+    display: block;
+}
+.showBox{
+    position: relative;
+}
+.showBox>span{
+    margin-left: .22rem;
+    font-size: .26rem;
+    line-height: 1.1rem;
+    color: #333333;
+}
+.showBox ul{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 1.5rem;
+    height: 1.1rem;
+}
+.showBox ul li{
+    display: none;
+    float: left;
+    position: relative;
+    box-sizing: border-box;
+    margin-left: .28rem;
+    padding-left: .06rem;
+    width: 2.13rem;
+    height: .57rem;
+    font-size: .26rem;
+    color: #333333;
+    line-height: .5rem;
+    border: 2px solid #33acfb;
+}
+.showBox ul li.act{
+    display: block;
+}
+.showBox i{
+    font-style: normal;
+}
+.showBox ul li span{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: .06rem;
+    margin: auto;
+    width: .26rem;
+    height: .26rem;
+    background: url("../images/close.png") center no-repeat;
+    background-size: cover;
+}
+.showBox div{
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding-left: 1.88rem;
+    width: 7rem;
+    height: .8rem;
+    font-size: .26rem;
+    line-height: .78rem;
+    color: #333333;
+    border-top: 1px solid #dfdfdf;
+    border-bottom: 1px solid #dfdfdf;
+}
+.showBox div span{
+    font-size: .38rem;
+    color: #ff0086;
+}
+.showBox div i{
+    font-size: .2rem;
+    color: #ff0086;
+}
+section>a{
+    display: block;
+    margin: .36rem auto;
+    width: 3.26rem;
+    height: .73rem;
+    font-size: .32rem;
+    text-align: center;
+    line-height: .73rem;
+    color: #ffffff;
+    border-radius: .05rem;
+    background-color: #33acfb;
+}
+footer ul{
+    box-sizing: border-box;
+    padding-left: .17rem;
+    width: 7.5rem;
+    height: .7rem;
+    border-bottom: 3px solid #e7e7e7;
+}
+footer ul li{
+    float: left;
+    margin-right: .7rem;
+    box-sizing: border-box;
+    width: 1.4rem;
+    height: .74rem;
+    text-align: center;
+    line-height: .74rem;
+    font-size: .26rem;
+    color: #333333;
+}
+footer ul li.active{
+    color: #33acfb;
+    height: .71rem;
+    border-bottom: .06rem solid #33acfb;
+}
+footer div{
+    display: none;
+    padding: .26rem .3rem .4rem .6rem;
+    font-size: .22rem;
+    color: #333333;
+}
+footer div.active{
+    display: block;
+}
+footer div p{
+    text-indent: -1.6em;
+    text-align: justify;
+}
