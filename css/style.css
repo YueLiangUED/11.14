@@ -102,7 +102,7 @@ main ul:nth-child(1) li>div div:nth-child(2){
     position: absolute;
     left: 0;
     right: 0;
-    bottom: -.14rem;
+    bottom: -.12rem;
     margin: auto;
     width: 0;
     height: 0;
@@ -166,8 +166,15 @@ main ul:nth-child(2) li span:nth-child(3),main ul:nth-child(3) li span:nth-child
     background: url("../images/check.png") center no-repeat;
     background-size: cover;
 }
-main ul:nth-child(2) li.active,main ul:nth-child(3) li.active{
+main ul:nth-child(3) li span:nth-child(3){
+    background: url("../images/check_1.png") center no-repeat;
+    background-size: cover;
+}
+main ul:nth-child(2) li.active{
     border: 2px solid #0da8ff;
+}
+main ul:nth-child(3) li.active{
+    border: 2px solid #fe44a2;
 }
 main ul:nth-child(2) li.active span:nth-child(3),main ul:nth-child(3) li.active span:nth-child(3){
     display: block;
