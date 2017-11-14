@@ -143,17 +143,17 @@ main ul:nth-child(2) li span i,main ul:nth-child(3) li span i{
 }
 main ul:nth-child(2) li span:nth-child(1){
     left: .06rem;
-    line-height: .65rem;
+    line-height: .67rem;
     color: #0da8ff;
 }
 main ul:nth-child(3) li span:nth-child(1){
     left: .06rem;
-    line-height: .65rem;
+    line-height: .67rem;
     color: #ff0081;
 }
 main ul:nth-child(2) li span:nth-child(2),main ul:nth-child(3) li span:nth-child(2){
     left: 1.34rem;
-    line-height: .65rem;
+    line-height: .67rem;
     color: #888888;
 }
 main ul:nth-child(2) li span:nth-child(3),main ul:nth-child(3) li span:nth-child(3){
