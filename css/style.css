@@ -167,7 +167,7 @@ main ul:nth-child(2) li span:nth-child(3),main ul:nth-child(3) li span:nth-child
     background-size: cover;
 }
 main ul:nth-child(2) li.active,main ul:nth-child(3) li.active{
-    border: 3px solid #0da8ff;
+    border: 2px solid #0da8ff;
 }
 main ul:nth-child(2) li.active span:nth-child(3),main ul:nth-child(3) li.active span:nth-child(3){
     display: block;
