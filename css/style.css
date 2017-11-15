@@ -8,32 +8,35 @@ main{
     box-sizing: border-box;
     padding: 15px 0 21px;
     width: 7.5rem;
-    height: 4.29rem;
     background-color: #f1f1f1;
 }
 main ul:nth-child(1){
     position: relative;
     box-sizing: border-box;
     width: 7.5rem;
-    height: .94rem;
+    height: 1.28rem;
     border: 2px solid #dfdfdf;
     background-color: #ffffff;
 }
 main ul:nth-child(1)>span{
     position: absolute;
     top: 0;
-    right: 0;
-    left: 0;
     bottom: 0;
     margin: auto;
     width: 2px;
-    height: .62rem;
+    height: .74rem;
     background-color: #f1f1f1;
+}
+main ul:nth-child(1)>span:nth-child(4){
+    left: 33%;
+}
+main ul:nth-child(1)>span:nth-child(5){
+    right: 33%;
 }
 main ul:nth-child(1) li{
     position: relative;
     float: left;
-    width: 50%;
+    width: 33.333333%;
     height: 100%;
 }
 main ul:nth-child(1) li span{
@@ -44,6 +47,9 @@ main ul:nth-child(1) li:nth-child(1).active span:nth-child(3){
 }
 main ul:nth-child(1) li:nth-child(2).active span:nth-child(3){
     color: #ff0081;
+}
+main ul:nth-child(1) li:nth-child(3).active span:nth-child(3){
+    color: #aadf54;
 }
 main ul:nth-child(1) li span:nth-child(1){
     width: .74rem;
@@ -61,10 +67,16 @@ main ul:nth-child(1) li:nth-child(2) span:nth-child(1){
     background: url("../images/bixuan_2.png") center no-repeat;
     background-size: cover;
 }
-main ul:nth-child(1) li span:nth-child(2){
+main ul:nth-child(1) li:nth-child(3) span:nth-child(1){
     top: 0;
-    bottom: 0;
-    left: .68rem;
+    right: 0;
+    background: url("../images/kexuan.png") center no-repeat;
+    background-size: cover;
+}
+main ul:nth-child(1) li span:nth-child(2){
+    top: .1rem;
+    left: 0;
+    right: 0;
     margin: auto;
     width: .64rem;
     height: .64rem;
@@ -77,13 +89,18 @@ main ul:nth-child(1) li:nth-child(2) span:nth-child(2){
     background: url("../images/llIcon.png") center no-repeat;
     background-size: cover;
 }
+main ul:nth-child(1) li:nth-child(3) span:nth-child(2){
+    background: url("../images/dxIcon.png") center no-repeat;
+    background-size: cover;
+}
 main ul:nth-child(1) li span:nth-child(3){
-    top: 0;
+    left: 0;
+    right: 0;
     bottom: 0;
-    left: 1.48rem;
     margin: auto;
-    font-size: .34rem;
-    line-height: .92rem;
+    font-size: .24rem;
+    text-align: center;
+    line-height: .5rem;
     color: #333333;
 }
 main ul:nth-child(1) li>div div:nth-child(1){
@@ -116,14 +133,14 @@ main ul:nth-child(1) li>div{
 main ul:nth-child(1) li.active>div{
     display: block;
 }
-main ul:nth-child(2),main ul:nth-child(3){
+main ul:nth-child(2),main ul:nth-child(3),main ul:nth-child(4){
     padding-left: .2rem;
     display: none;
 }
 main ul.active{
     display: block;
 }
-main ul:nth-child(2) li,main ul:nth-child(3) li{
+main ul:nth-child(2) li,main ul:nth-child(3) li,main ul:nth-child(4) li{
     position: relative;
     float: left;
     box-sizing: border-box;
@@ -133,13 +150,16 @@ main ul:nth-child(2) li,main ul:nth-child(3) li{
     border: 2px solid #dfdfdf;
     background-color: #ffffff;
 }
-main ul:nth-child(2) li span,main ul:nth-child(3) li span{
+main ul:nth-child(2) li span,main ul:nth-child(3) li span,main ul:nth-child(4) li span{
     position: absolute;
     font-size: .18rem;
 }
-main ul:nth-child(2) li span i,main ul:nth-child(3) li span i{
+main ul:nth-child(2) li span i,main ul:nth-child(3) li span i,main ul:nth-child(4) li span i{
     font-style: normal;
     font-size: .3rem;
+}
+main ul:nth-child(4) li span i:nth-child(2){
+    font-size: .18rem;
 }
 main ul:nth-child(2) li span:nth-child(1){
     left: .06rem;
@@ -151,12 +171,17 @@ main ul:nth-child(3) li span:nth-child(1){
     line-height: .67rem;
     color: #ff0081;
 }
-main ul:nth-child(2) li span:nth-child(2),main ul:nth-child(3) li span:nth-child(2){
-    left: 1.34rem;
+main ul:nth-child(4) li span:nth-child(1){
+    left: .06rem;
+    line-height: .67rem;
+    color: #aadf54;
+}
+main ul:nth-child(2) li span:nth-child(2),main ul:nth-child(3) li span:nth-child(2),main ul:nth-child(4) li span:nth-child(2){
+    left: 1.4rem;
     line-height: .67rem;
     color: #888888;
 }
-main ul:nth-child(2) li span:nth-child(3),main ul:nth-child(3) li span:nth-child(3){
+main ul:nth-child(2) li span:nth-child(3),main ul:nth-child(3) li span:nth-child(3),main ul:nth-child(4) li span:nth-child(3){
     display: none;
     position: absolute;
     right: -0.02rem;
@@ -170,30 +195,39 @@ main ul:nth-child(3) li span:nth-child(3){
     background: url("../images/check_1.png") center no-repeat;
     background-size: cover;
 }
+main ul:nth-child(4) li span:nth-child(3){
+    background: url("../images/check_2.png") center no-repeat;
+    background-size: cover;
+}
 main ul:nth-child(2) li.active{
     border: 2px solid #0da8ff;
 }
 main ul:nth-child(3) li.active{
     border: 2px solid #fe44a2;
 }
-main ul:nth-child(2) li.active span:nth-child(3),main ul:nth-child(3) li.active span:nth-child(3){
+main ul:nth-child(4) li.active{
+    border: 2px solid #aadf54;
+}
+main ul:nth-child(2) li.active span:nth-child(3),main ul:nth-child(3) li.active span:nth-child(3),main ul:nth-child(4) li.active span:nth-child(3){
     display: block;
 }
 .showBox{
     position: relative;
 }
 .showBox>span{
+    display: block;
+    height: 1.3rem;
     margin-left: .22rem;
     font-size: .26rem;
-    line-height: 1.1rem;
+    line-height: .6rem;
     color: #333333;
 }
 .showBox ul{
     display: flex;
     align-items: center;
     position: absolute;
-    top: 0;
-    left: 1.5rem;
+    top: .3rem;
+    left: .22rem;
     height: 1.1rem;
 }
 .showBox ul li{
@@ -201,7 +235,7 @@ main ul:nth-child(2) li.active span:nth-child(3),main ul:nth-child(3) li.active 
     float: left;
     position: relative;
     box-sizing: border-box;
-    margin-left: .28rem;
+    margin-left: .2rem;
     padding-left: .06rem;
     width: 2.13rem;
     height: .57rem;
@@ -209,6 +243,9 @@ main ul:nth-child(2) li.active span:nth-child(3),main ul:nth-child(3) li.active 
     color: #333333;
     line-height: .5rem;
     border: 2px solid #33acfb;
+}
+.showBox ul li:nth-child(1){
+    margin-left: .15rem;
 }
 .showBox ul li.act{
     display: block;

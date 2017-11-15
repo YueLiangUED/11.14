@@ -11,8 +11,9 @@ $(function () {
     var $showList = $('#showList'),
         $tab_th = $('#tab_th'),
         $tab_ll = $('#tab_ll'),
+        $tab_dx = $('#tab_dx'),
         $price = $('#price'),
-        thPrice,llPrice,
+        thPrice,llPrice,dxPrice,
         $tab_footer = $('#tab_footer'),
         $btn = $('#btn');
     var $tab = function ($select) {
@@ -32,22 +33,58 @@ $(function () {
         $showList.children('li:nth-child(1)').addClass('act').end().children('li:nth-child(1)').children('i').text($(this).children('span:nth-child(1)').text());
         $this.addClass('active').siblings('li').removeClass('active');
         thPrice = parseInt($this.children('span:nth-child(2)').text());
-        llPrice === undefined ? $price.text(0) : $price.text(thPrice + llPrice);
+        if(thPrice !== undefined && llPrice !== undefined && dxPrice === undefined){
+            $price.text(thPrice + llPrice + (Boolean(dxPrice) - 0));
+        }else if(thPrice !==undefined && llPrice !== undefined && dxPrice !== undefined){
+            $price.text(thPrice + llPrice + dxPrice);
+        }else{
+            $price.text(0);
+        }
+        //llPrice === undefined ? $price.text(0) : $price.text(thPrice + llPrice);
     });
     $tab_ll.on('click','li',function () {
         var $this = $(this);
         $showList.children('li:nth-child(2)').addClass('act').end().children('li:nth-child(2)').children('i').text($(this).children('span:nth-child(1)').text());
         $this.addClass('active').siblings('li').removeClass('active');
         llPrice = parseInt($this.children('span:nth-child(2)').text());
-        thPrice === undefined ? $price.text(0) : $price.text(thPrice + llPrice);
+        if(thPrice !== undefined && llPrice !== undefined && dxPrice === undefined){
+            $price.text(thPrice + llPrice + (Boolean(dxPrice) - 0));
+        }else if(thPrice !==undefined && llPrice !== undefined && dxPrice !== undefined){
+            $price.text(thPrice + llPrice + dxPrice);
+        }else{
+            $price.text(0);
+        }
+        //thPrice === undefined ? $price.text(0) : $price.text(thPrice + llPrice);
+    });
+
+    $tab_dx.on('click','li',function () {
+        var $this = $(this);
+        $showList.children('li:nth-child(3)').addClass('act').end().children('li:nth-child(3)').children('i:nth-child(2)').text($(this).children('span:nth-child(1)').text());
+        $this.addClass('active').siblings('li').removeClass('active');
+        dxPrice = parseInt($this.children('span:nth-child(2)').text());
+        if(thPrice !== undefined && llPrice !== undefined){
+            $price.text(thPrice + llPrice + dxPrice);
+        }else{
+            $price.text(0);
+        }
     });
     $showList.on('click','li',function () {
         var $this = $(this);
-        $price.text(0);
+        if($this.hasClass('dx') === false){
+            $price.text(0);
+        }else if($this.hasClass('dx') === true && thPrice !== undefined && llPrice !== undefined){
+            $price.text(thPrice + llPrice);
+        }
         $this.removeClass('act');
-        $this.hasClass('th') ? $tab_th.children('li').removeClass('active') : $tab_ll.children('li').removeClass('active');
-        $this.hasClass('ll') ? llPrice = undefined : thPrice = undefined;
+        $this.hasClass('th') ? $tab_th.children('li').removeClass('active') : ($this.hasClass('ll') ? $tab_ll.children('li').removeClass('active') : $tab_dx.children('li').removeClass('active'));
+        if($this.hasClass('ll')){
+            llPrice = undefined;
+        }else if($this.hasClass('th')){
+            thPrice = undefined;
+        }
+        //$this.hasClass('ll') ? llPrice = undefined : thPrice = undefined;
     });
+
     $btn.on('click',function (e) {
         e.preventDefault();
         if(thPrice === undefined){
