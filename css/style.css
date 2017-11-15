@@ -63,7 +63,7 @@ main ul:nth-child(1) li:nth-child(1) span:nth-child(1){
 }
 main ul:nth-child(1) li:nth-child(2) span:nth-child(1){
     bottom: 0;
-    right: 2px;
+    right: 1px;
     background: url("../images/bixuan_2.png") center no-repeat;
     background-size: cover;
 }
