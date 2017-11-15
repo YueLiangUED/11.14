@@ -81,6 +81,8 @@ $(function () {
             llPrice = undefined;
         }else if($this.hasClass('th')){
             thPrice = undefined;
+        }else if($this.hasClass('dx')){
+            dxPrice = undefined;
         }
         //$this.hasClass('ll') ? llPrice = undefined : thPrice = undefined;
     });
